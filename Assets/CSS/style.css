@@ -1,0 +1,52 @@
+/* body {
+    background-image: url('/Assets/Images/background1.jpg'); 
+    background-size: 100%;
+    
+}
+*/
+#timer {
+    align-content: center;
+    color: darkmagenta;
+    text-align: center;
+    border: 1px;
+    border-style: inset;
+    border-color: red;
+    width: 99px;
+    margin-left: 42%;
+    
+}
+
+p {
+    color: red;
+    font-size: 25px;
+}
+
+q {
+    border: 1px;
+    border-color: blue;
+}
+
+.questionsMain {
+    text-align: center;
+    align-content: center;
+    color: darkblue;
+    font-family: cursive;
+}
+
+p {
+    color: blue;
+     
+}
+
+header {
+    font-family: fantasy;
+    text-align: center;
+    color: blue;
+    font-size: 55px;
+    border-bottom: 3px;
+    border-style: groove;
+    border-color: blue;
+    border-bottom-color: white;
+    text-shadow: 1px 1px 0 black, 
+                5px 5px 0 black;
+}

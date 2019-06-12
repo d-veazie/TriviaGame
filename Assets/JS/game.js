@@ -1,40 +1,83 @@
 let score = 0;
-// answer button funciton
+const questions = [
+    {
+        question: "What character on the TV show 'South Park' wears a blue hat with a red point on it?",
+        choices: ["Cartman", "Stan", "Kenny"],
+        correctChoice: "Stan"
+    },
+    {
+        question: "In Dumb and Dumber what city did they have to go back to in order to find the briefcase they lost?",
+        choices: ["Aurora", "Aspen", "Augusta"],
+        correctChoice: "Aspen"
+    },
+    {
+    question: "What season did the Simpsons enter in 2018?",
+    choices: ["30", "33", "29"],
+    correctChoice: "30"
+    }
+]
+// answer button funciton  What season did the Simpsons enter in 2018?
 function Answer() {
     let radios = document.getElementsByName("choice");
     let checked = false;
+    let questionNumber;
     let userResponse;
     let mssg = document.getElementById("mssg");
-    //loop 
+    //loops through answer dot things aka radios
     for(i = 0; i < radios.length; i++) {
         if(radios[i].checked) {
             checked = true;
+            questionNumber = radios[i].getAttribute('data-question')
+            questionNumber = parseInt(questionNumber)
+            console.log(questionNumber)
             userResponse = radios[i].value; //.value returns options 
         }
     }
+
+    if(userResponse === questions[questionNumber].correctChoice) {
+        score++; 
+        if(score === 3) {
+            document.getElementById("mainContent").innerHTML = "Game Over";
+            alert("Winner!! You got " + score + "/" + "3");
+            clearTimeout(timerMain);
+        }
+
+    }
+
     // if answer is stan display correct in mssg div
-    if(userResponse === "30") {
-        document.getElementById("mssg3").innerHTML = "correct"
-        score++;
-    }
+    //if(userResponse === "30") {
+      //  document.getElementById("mssg3").innerHTML = "correct"
+        //score++;
+   // }
     
-    if (userResponse === "Aspen") {
-        document.getElementById("mssg2").innerHTML = "correct"
-        score++;
-    }
+   // else if (userResponse === "Aspen") {
+     //   document.getElementById("mssg2").innerHTML = "correct"
+       // score++;
+    //}
 
-    if (userResponse === "Stan") {
-        document.getElementById("mssg").innerHTML = "correct!"
-        score++;
+   //else if (userResponse === "Stan") {
+     //   document.getElementById("mssg").innerHTML = "correct!"
+       // score++;
 
-    }
+    //}
+
+   //else if (userResponse === "10") {
+     //   document.getElementById("mssg4").innerHTML = "correct!"
+       // score++;
+
+    //}
     // otherwise display wrong 
-    else {
-        document.getElementById("mssg").innerHTML = "wrong"
-    }
+    // else {
+    //    document.getElementById("mssg").innerHTML = "wrong"
+   // }
 
+//}
+//function winfunction() {
+//if (score === 3) {
+  //  alert("You got all three correct, you won!");
+    //document.getElementById("mainContent") = "You Won!";
+//}
 }
-
 //countdown timer
 let timeLeft = 30;
 
@@ -51,6 +94,13 @@ function countfunction() {
         document.getElementById("timer").innerHTML = timeLeft + " seconds left to finish";
         timeLeft--;
     }
+     {
+    if (score === 3) {
+            alert("You got all three correct, you won!");
+            document.getElementById("mainContent") = "You Won!";
+            clearTimeout(timerMain);
+        }
+        }
 }
 // list of questions
 //alerts and prompts to test code ideas

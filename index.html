@@ -7,28 +7,27 @@
     <script type="text/javascript" src = "./Assets/JS/game.js"></script>
 
     <link rel="stylesheet" href="./Assets/CSS/style.css"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Movie/TV Trivia</title>
 </head>
-<body>
+<body id="body1">
     <div id="mainContent">
 
     <div class="header">
         <header>
             Movie/Television Trivia!
         </header>
-
+        <br>
         <div id="timer">
-
         </div>
+        <br>
     </div>
     <div class="questionsMain">
         <div class="q">
         <h4>What character on the TV show 'South Park' wears a blue hat with a red point on it?</h4>
-        <input type="radio" name="choice" value="Cartman">Cartman <br>
-        <input type="radio" name="choice" value="Stan">Stan <br>
-        <input type="radio" name="choice" value="Kenny">Kenny 
+        <input data-question="0" type="radio" name="choice" value="Cartman">Cartman <br>
+        <input data-question="0" type="radio" name="choice" value="Stan">Stan <br>
+        <input data-question="0" type="radio" name="choice" value="Kenny">Kenny 
         <br/>
          <p id="mssg"></p>  
 
@@ -38,9 +37,9 @@
 <br><br><br>
         <div class="q">
         <h4>In Dumb and Dumber what city did they have to go back to in order to find the briefcase they lost?</h4>
-        <input type="radio" name="choice" value="Aspen">Aspen <br>
-        <input type="radio" name="choice" value="Aurora">Aurora <br>
-        <input type="radio" name="choice" value="Augusta">Augusta 
+        <input data-question="1" type="radio" name="choice" value="Aspen">Aspen <br>
+        <input data-question="1" type="radio" name="choice" value="Aurora">Aurora <br>
+        <input data-question="1" type="radio" name="choice" value="Augusta">Augusta 
         <br/>
         <p id="mssg2"></p>  
 <button onclick="Answer()">Submit</button>
@@ -48,15 +47,14 @@
 <br><br><br>
             <div class="q">
         <h4>What season did the Simpsons enter in 2018?</h4>
-        <input type="radio" name="choice" value="30">30 <br>
-        <input type="radio" name="choice" value="33">33 <br>
-        <input type="radio" name="choice" value="29">29 
+        <input data-question="2" type="radio" name="choice" value="30">30 <br>
+        <input data-question="2" type="radio" name="choice" value="33">33 <br>
+        <input data-question="2" type="radio" name="choice" value="29">29 
         <br/>
         <p id="mssg3"></p>  
         
 <button onclick="Answer()">Submit</button>
         </div>
-<br><br><br>
 
 
     </div>

@@ -1,17 +1,22 @@
-/* body {
-    background-image: url('/Assets/Images/background1.jpg'); 
-    background-size: 100%;
-    
+
+#mainContent {
+   /* background-image: url("/Assets/Images/bk.jpg"); */
+    background-color: #cccccc; 
+    height: 98%;
+  /*  background-position: center; */
+  /*  background-repeat: no-repeat;  */
+   /* background-size: cover; */
+    margin: 50px;
 }
-*/
+
 #timer {
     align-content: center;
     color: darkmagenta;
     text-align: center;
-    border: 1px;
+    border: 15px;
     border-style: inset;
     border-color: red;
-    width: 99px;
+    width: 150px;
     margin-left: 42%;
     
 }
@@ -43,10 +48,6 @@ header {
     text-align: center;
     color: blue;
     font-size: 55px;
-    border-bottom: 3px;
-    border-style: groove;
-    border-color: blue;
-    border-bottom-color: white;
     text-shadow: 1px 1px 0 black, 
                 5px 5px 0 black;
 }

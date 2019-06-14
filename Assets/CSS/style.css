@@ -7,6 +7,19 @@
   /*  background-repeat: no-repeat;  */
    /* background-size: cover; */
     margin: 50px;
+    padding: 15px
+}
+
+#bottomButton {
+    margin-bottom: 15px;
+}
+
+body {
+    background-image: url(../Images/bk.jpg);
+}
+
+hr {
+    color: aqua; 
 }
 
 #timer {
@@ -18,6 +31,7 @@
     border-color: red;
     width: 150px;
     margin-left: 42%;
+    margin-top: 10px;
     
 }
 
